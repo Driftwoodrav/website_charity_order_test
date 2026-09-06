@@ -17,22 +17,38 @@
     </head>
 
     <body class="gallery-body">
-        <!-- Navigation Bar -->
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Main Navigation">
             <div class="logo-container">
                 <img src="images/charity-logo.png" alt="SharingSmiles Charity Logo" class="brand-logo" />
                 <div class="logo-divider"></div>
                 <img src="images/camed-logo.png" alt="CamEd Business School Logo" class="brand-logo" />
             </div>
 
+            <!-- hamburger for mobile -->
+            <button
+                class="menu-toggle"
+                id="mobileMenuBtn"
+                aria-label="Toggle Navigation Menu"
+                aria-expanded="false"
+                aria-controls="navLinks">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+
             <div class="nav-right-container">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html#home" class="nav-item">Home</a></li>
+                    <li><a href="index.html#about" class="nav-item">More About Us</a></li>
+                    <li><a href="index.html#schools" class="nav-item">Schools We Help</a></li>
+                    <li><a href="index.html#contact" class="nav-item">Contact Us</a></li>
+                </ul>
+
                 <a href="donate.html" class="btn btn-primary"> <i class="fa-solid fa-heart"></i> Donate </a>
+                <a href="order.html" class="btn btn-primary"> <i class="fa-solid fa-box"></i> Order </a>
                 <a href="index.html" class="btn btn-secondary-outline">
                     <i class="fa-solid fa-arrow-left"></i> Back to Home
                 </a>
             </div>
         </nav>
-
         <!-- Gallery Banner -->
         <header class="gallery-hero">
             <div class="container">

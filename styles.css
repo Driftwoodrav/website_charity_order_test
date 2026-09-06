@@ -281,7 +281,15 @@ body {
         text-align: center;
     }
 
-    /* Specific Override for Gallery Page Header Controls */
+    .gallery-body .nav-right-container .btn {
+        padding: 0.4rem 0.85rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* Make gallery header controls remain inline on desktop only.
+   On small screens the unified mobile menu (hamburger) will be used. */
+@media screen and (min-width: 993px) {
     .gallery-body .nav-right-container {
         position: static;
         max-height: none;
@@ -295,7 +303,7 @@ body {
 
     .gallery-body .nav-right-container .btn {
         padding: 0.4rem 0.85rem;
-        font-size: 0.85rem;
+        font-size: 0.95rem;
     }
 }
 
