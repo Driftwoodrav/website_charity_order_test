@@ -17,14 +17,14 @@
     </head>
 
     <body class="gallery-body">
+        <!-- Unified Navigation Bar -->
         <nav class="navbar" aria-label="Main Navigation">
             <div class="logo-container">
                 <img src="images/charity-logo.png" alt="SharingSmiles Charity Logo" class="brand-logo" />
-                <div class="logo-divider"></div>
+                <div class="logo-divider" role="separator"></div>
                 <img src="images/camed-logo.png" alt="CamEd Business School Logo" class="brand-logo" />
             </div>
 
-            <!-- hamburger for mobile -->
             <button
                 class="menu-toggle"
                 id="mobileMenuBtn"
@@ -40,12 +40,21 @@
                     <li><a href="index.html#about" class="nav-item">More About Us</a></li>
                     <li><a href="index.html#schools" class="nav-item">Schools We Help</a></li>
                     <li><a href="index.html#contact" class="nav-item">Contact Us</a></li>
+                    <li><a href="gallery.html" class="nav-item">Photo Gallery</a></li>
+                    <li><a href="donate.html" class="nav-item">Donate</a></li>
+                    <li><a href="order.html" class="nav-item">Order</a></li>
+                    <li><a href="staff.html" class="nav-item">Staff</a></li>
                 </ul>
 
-                <a href="donate.html" class="btn btn-primary"> <i class="fa-solid fa-heart"></i> Donate </a>
-                <a href="order.html" class="btn btn-primary"> <i class="fa-solid fa-box"></i> Order </a>
-                <a href="index.html" class="btn btn-secondary-outline">
-                    <i class="fa-solid fa-arrow-left"></i> Back to Home
+                <!-- Secondary CTA Buttons -->
+                <a href="gallery.html" class="btn btn-gallery-nav">
+                    <i class="fa-solid fa-images" aria-hidden="true"></i> Photo Gallery
+                </a>
+                <a href="donate.html" class="btn btn-gallery-nav">
+                    <i class="fa-solid fa-heart" aria-hidden="true"></i> Donate Now
+                </a>
+                <a href="order.html" class="btn btn-gallery-nav">
+                    <i class="fa-solid fa-box" aria-hidden="true"></i> Order
                 </a>
             </div>
         </nav>

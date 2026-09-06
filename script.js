@@ -542,6 +542,46 @@ function __init() {
             });
     })();
 } // end __init
+// --- Auto-mark nav link active based on current page or hash ---
+(function setActiveNavLink() {
+    try {
+        const links = Array.from(
+            document.querySelectorAll(".nav-right-container a.nav-item, .nav-right-container a.btn")
+        );
+        const currentPath = (location.pathname || "/").replace(/\/$/, "");
+
+        links.forEach((a) => {
+            const href = a.getAttribute("href");
+            if (!href) return;
+
+            if (href.startsWith("#")) {
+                if (
+                    (currentPath === "" || currentPath.endsWith("index.html") || currentPath === "/") &&
+                    location.hash === href
+                ) {
+                    a.classList.add("active");
+                } else {
+                    a.classList.remove("active");
+                }
+                return;
+            }
+
+            const url = new URL(href, location.origin);
+            const hrefPath = (url.pathname || "/").replace(/\/$/, "");
+            const isIndexHere =
+                (hrefPath === "/index.html" || hrefPath === "") &&
+                (currentPath === "" || currentPath === "/index.html" || currentPath === "/");
+
+            if (isIndexHere || hrefPath === currentPath) {
+                a.classList.add("active");
+            } else {
+                a.classList.remove("active");
+            }
+        });
+    } catch (e) {
+        console.warn("setActiveNavLink error", e);
+    }
+})();
 
 if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", __init);
