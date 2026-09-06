@@ -151,15 +151,17 @@
                                     <label for="building">Building</label>
                                     <select id="building" required class="form-input">
                                         <option value="">Select building</option>
-                                        <option value="A">Building A</option>
-                                        <option value="B">Building B</option>
-                                        <option value="C">Building C</option>
+                                        <option value="East">CamEd East Building</option>
+                                        <option value="Central">CamEd Central Building</option>
+                                        <option value="West">CamEd West Building</option>
                                     </select>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="room">Room / Unit</label>
-                                    <input id="room" name="room" class="form-input" placeholder="e.g., 302" required />
+                                    <select id="room" name="room" class="form-input" required>
+                                        <option value="">Select building first</option>
+                                    </select>
                                 </div>
 
                                 <div class="form-group">
@@ -208,6 +210,117 @@
         <footer class="footer">
             <p>&copy; 2026 SharingSmilesCharity. Brought to you by CamEd Business School. All rights reserved.</p>
         </footer>
+
+        <!-- Room population script (uses names/rooms from the map image) -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const roomsByBuilding = {
+                    East: [
+                        "Meeting Room",
+                        "H.E. Dr. Ngy Tayi",
+                        "David Alonso",
+                        "Robert Solow",
+                        "Robert Shiller",
+                        "Franco Modigliani",
+                        "Reading Room",
+                        "Daniel Kahneman",
+                        "Myron Scholes",
+                        "Fibonacci Computer Laboratory",
+                        "Study Lounge",
+                        "Finance",
+                        "Store Room",
+                        "IT & Registrar"
+                    ],
+                    Central: [
+                        "Diversity Laboratory Room",
+                        "Business Lab 3",
+                        "Media & Graphic Design Office",
+                        "Studio Room",
+                        "Consultation Room",
+                        "Study Lounge",
+                        "Library",
+                        "Milton Friedman",
+                        "Dr. Sam Ghanty",
+                        "Luca Pacioli",
+                        "Learning Support Center",
+                        "IQA & IA, HR",
+                        "Health Clinic",
+                        "Server Room"
+                    ],
+                    West: [
+                        "Refectory",
+                        "Benjamin Graham Discussion Room",
+                        "Charlie Munger",
+                        "Thomas Sowell",
+                        "Ludwig Von Mises Reading Room",
+                        "Nassim Nicolas Taleb",
+                        "Lab 8",
+                        "Lab 9",
+                        "Lab 10",
+                        "Lab 11",
+                        "Lab 12",
+                        "Warren Buffett",
+                        "Lab 5",
+                        "Lab 6",
+                        "Lab 7",
+                        "David Ricardo",
+                        "John Locke Reading Room",
+                        "Thomas Hobbes Reading Room",
+                        "Lab 4",
+                        "Sir David Tweedie",
+                        "Praying Room",
+                        "Al-Khwarizmi Reading Room",
+                        "John Maynard Keynes",
+                        "William F.Sharpe",
+                        "Friedrich Hayek",
+                        "Richard Thaler",
+                        "Peter Bainbridge",
+                        "Career Services and Student Advising Room",
+                        "Adam Smith",
+                        "Lecturer Room & International Engagement",
+                        "Lecturer Room",
+                        "Harry Markowitz",
+                        "Admission",
+                        "Front Desk",
+                        "Study Lounge"
+                    ]
+                };
+
+                const buildingEl = document.getElementById("building");
+                const roomEl = document.getElementById("room");
+
+                function populateRooms(building) {
+                    roomEl.innerHTML = "";
+                    if (!building || !roomsByBuilding[building]) {
+                        const opt = document.createElement("option");
+                        opt.value = "";
+                        opt.textContent = "Select building first";
+                        roomEl.appendChild(opt);
+                        roomEl.disabled = true;
+                        return;
+                    }
+                    const placeholder = document.createElement("option");
+                    placeholder.value = "";
+                    placeholder.textContent = "Select room / unit";
+                    roomEl.appendChild(placeholder);
+
+                    roomsByBuilding[building].forEach((r) => {
+                        const opt = document.createElement("option");
+                        opt.value = r;
+                        opt.textContent = r;
+                        roomEl.appendChild(opt);
+                    });
+                    roomEl.disabled = false;
+                }
+
+                // initial state
+                populateRooms(null);
+
+                buildingEl.addEventListener("change", function () {
+                    populateRooms(this.value);
+                });
+            });
+        </script>
 
         <!-- Firebase Compatibility SDKs -->
         <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
