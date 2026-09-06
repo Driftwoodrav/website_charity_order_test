@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Staff Orders - SharingSmilesCharity</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <nav class="navbar" aria-label="Main Navigation">
+    <div class="logo-container">
+      <img src="images/charity-logo.png" alt="SharingSmiles Charity Logo" class="brand-logo" />
+      <div class="logo-divider" role="separator"></div>
+      <img src="images/camed-logo.png" alt="CamEd Business School Logo" class="brand-logo" />
+    </div>
+
+    <button class="menu-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="navLinks">
+      <i class="fa-solid fa-bars" aria-hidden="true"></i>
+    </button>
+
+    <div class="nav-right-container">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#home" class="nav-item">Home</a></li>
+      </ul>
+
+      <a href="order.html" class="btn btn-gallery-nav"><i class="fa-solid fa-box" aria-hidden="true"></i> Orders (public)</a>
+      <a href="donate.html" class="btn btn-gallery-nav"><i class="fa-solid fa-heart" aria-hidden="true"></i> Donate</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="section donate-section staff-section">
+      <div class="container">
+        <h2 class="section-title">Staff — Current Orders</h2>
+        <p class="section-subtitle">Sign in with your staff PIN to view and manage current orders.</p>
+
+        <div id="staffArea">
+          <div id="staffLogin" class="donate-card" style="max-width:420px; margin:0 auto;">
+            <div class="form-group">
+              <label for="staffPin">Staff PIN</label>
+              <input id="staffPin" class="form-input" type="password" placeholder="Enter staff PIN" />
+            </div>
+            <div style="display:flex; gap:8px; justify-content:flex-end;">
+              <button id="staffLoginBtn" class="btn btn-primary">Unlock</button>
+            </div>
+          </div>
+
+          <div id="ordersPanel" class="donate-card" style="display:none; margin-top:20px;">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <h3>All Orders</h3>
+              <div>
+                <button id="refreshOrders" class="btn btn-secondary-outline">Refresh</button>
+                <button id="logoutBtn" class="btn btn-secondary-outline">Logout</button>
+              </div>
+            </div>
+
+            <div id="ordersList" style="margin-top:12px; overflow:auto; max-height:60vh;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 SharingSmilesCharity. Brought to you by CamEd Business School. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+    <!-- Firebase Compatibility SDKs -->
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+
+<!-- Your Configuration File -->
+<script src="firebase-config.js"></script>
+</body>
+</html>

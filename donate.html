@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Donate - SharingSmilesCharity</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <nav class="navbar" aria-label="Main Navigation">
+            <div class="logo-container">
+                <img src="images/charity-logo.png" alt="SharingSmiles Charity Logo" class="brand-logo" />
+                <div class="logo-divider" role="separator"></div>
+                <img src="images/camed-logo.png" alt="CamEd Business School Logo" class="brand-logo" />
+            </div>
+
+            <button
+                class="menu-toggle"
+                id="mobileMenuBtn"
+                aria-label="Toggle Navigation Menu"
+                aria-expanded="false"
+                aria-controls="navLinks">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+
+            <div class="nav-right-container">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html#home" class="nav-item">Home</a></li>
+                    <li><a href="index.html#about" class="nav-item">More About Us</a></li>
+                    <li><a href="index.html#schools" class="nav-item">Schools We Help</a></li>
+                    <li><a href="index.html#contact" class="nav-item">Contact Us</a></li>
+                </ul>
+
+                <a href="gallery.html" class="btn btn-gallery-nav">
+                    <i class="fa-solid fa-images" aria-hidden="true"></i> Photo Gallery
+                </a>
+
+                <a href="donate.html" class="btn btn-gallery-nav active">
+                    <i class="fa-solid fa-heart" aria-hidden="true"></i> Donate Now
+                </a>
+            </div>
+        </nav>
+
+        <main>
+            <section class="section donate-section">
+                <div class="container">
+                    <h2 class="section-title">Support SharingSmiles</h2>
+                    <p class="section-subtitle">
+                        Your generous contributions directly support under-resourced schools in Cambodia with
+                        stationery, textbooks, and facility repairs.
+                    </p>
+
+                    <div
+                        class="donate-container"
+                        style="
+                            max-width: 520px;
+                            width: 100%;
+                            margin: 0 auto;
+                            background: #ffffff;
+                            padding: 2.5rem 2rem;
+                            border-radius: 16px;
+                            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+                            text-align: center;
+                        ">
+                        <h3 style="margin-bottom: 0.5rem; color: #1a1a1a; font-size: 1.5rem">Scan with KHQR</h3>
+                        <p style="color: #666; margin-bottom: 2rem; font-size: 0.95rem; line-height: 1.5">
+                            Use any Cambodian mobile banking app to scan and donate in USD or KHR.
+                        </p>
+
+                        <!-- Clean Wrapper (No background, no shadow, no fixed dimensions) -->
+                        <div
+                            class="qr-wrapper"
+                            style="
+                                margin: 0 auto 2rem auto;
+                                background: transparent;
+                                box-shadow: none;
+                                width: auto;
+                                height: auto;
+                            ">
+                            <img
+                                src="images/khqr-code.png"
+                                alt="KHQR Payment Code for CHANNIZA LONG"
+                                style="
+                                    width: 308px;
+                                    height: 414px;
+                                    max-width: 100%;
+                                    object-fit: contain;
+                                    border-radius: 12px;
+                                    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                                    display: block;
+                                    margin: 0 auto;
+                                " />
+                        </div>
+
+                        <!-- Account Details Box -->
+                        <div
+                            class="account-details"
+                            style="
+                                background: #f8f9fa;
+                                padding: 1.25rem 1.5rem;
+                                border-radius: 10px;
+                                text-align: left;
+                                border: 1px solid #e9ecef;
+                            ">
+                            <p style="margin-bottom: 0.5rem; font-size: 1.05rem; color: #2c3e50">
+                                Account Name: <strong style="color: #0f172a">CHANNIZA LONG</strong>
+                            </p>
+                            <hr style="border: 0; border-top: 1px solid #dee2e6; margin: 0.75rem 0" />
+                            <p style="margin-bottom: 0.5rem; color: #334155; font-size: 0.95rem">
+                                <i
+                                    class="fa-solid fa-money-bill-wave"
+                                    aria-hidden="true"
+                                    style="margin-right: 8px; color: #16a34a"></i>
+                                <strong>KHR Account:</strong> 018 996 934
+                            </p>
+                            <p style="margin: 0; color: #334155; font-size: 0.95rem">
+                                <i
+                                    class="fa-solid fa-dollar-sign"
+                                    aria-hidden="true"
+                                    style="margin-right: 12px; color: #0284c7"></i>
+                                <strong>USD Account:</strong> 018 986 181
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 SharingSmilesCharity. Brought to you by CamEd Business School. All rights reserved.</p>
+        </footer>
+
+        <script src="script.js?v=8.0"></script>
+    </body>
+</html>

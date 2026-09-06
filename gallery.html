@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Photo Gallery - SharingSmiles Charity</title>
+
+        <!-- Google Fonts & Font Awesome -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+
+    <body class="gallery-body">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="images/charity-logo.png" alt="SharingSmiles Charity Logo" class="brand-logo" />
+                <div class="logo-divider"></div>
+                <img src="images/camed-logo.png" alt="CamEd Business School Logo" class="brand-logo" />
+            </div>
+
+            <div class="nav-right-container">
+                <a href="donate.html" class="btn btn-primary"> <i class="fa-solid fa-heart"></i> Donate </a>
+                <a href="index.html" class="btn btn-secondary-outline">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Home
+                </a>
+            </div>
+        </nav>
+
+        <!-- Gallery Banner -->
+        <header class="gallery-hero">
+            <div class="container">
+                <span class="badge">Sharing Smiles Community</span>
+                <h1 class="gallery-title">Photo Gallery</h1>
+                <p class="gallery-description">A look into our school and comumity visit</p>
+            </div>
+        </header>
+
+        <!-- Image-Only Gallery Grid Section -->
+        <section class="section gallery-section">
+            <div class="container">
+                <div class="gallery-grid">
+                    <div class="gallery-card">
+                        <img src="images/gallery-1.jpg" alt="Charity event photo 1" class="gallery-img" />
+                    </div>
+
+                    <div class="gallery-card">
+                        <img src="images/gallery-2.jpg" alt="Charity event photo 2" class="gallery-img" />
+                    </div>
+
+                    <div class="gallery-card">
+                        <img src="images/gallery-3.jpg" alt="Charity event photo 3" class="gallery-img" />
+                    </div>
+
+                    <div class="gallery-card">
+                        <img src="images/gallery-4.jpg" alt="Charity event photo 4" class="gallery-img" />
+                    </div>
+
+                    <div class="gallery-card">
+                        <img src="images/gallery-5.jpg" alt="Charity event photo 5" class="gallery-img" />
+                    </div>
+
+                    <div class="gallery-card">
+                        <img src="images/gallery-6.jpg" alt="Charity event photo 6" class="gallery-img" />
+                    </div>
+
+                    <div class="gallery-card">
+                        <img src="images/gallery-7.jpg" alt="Charity event photo 7" class="gallery-img" />
+                    </div>
+
+                    <div class="gallery-card">
+                        <img src="images/gallery-8.jpg" alt="Charity event photo 8" class="gallery-img" />
+                    </div>
+
+                    <div class="gallery-card">
+                        <img src="images/gallery-9.jpg" alt="Charity event photo 9" class="gallery-img" />
+                    </div>
+
+                    <div class="gallery-card">
+                        <img src="images/gallery-10.jpg" alt="Charity event photo 10" class="gallery-img" />
+                    </div>
+
+                    <div class="gallery-card">
+                        <img src="images/gallery-11.jpg" alt="Charity event photo 11" class="gallery-img" />
+                    </div>
+
+                    <div class="gallery-card">
+                        <img src="images/gallery-12.jpg" alt="Charity event photo 12" class="gallery-img" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 SharingSmilesCharity. Brought to you by CamEd Business School. All rights reserved.</p>
+        </footer>
+
+        <!-- Lightbox Modal Overlay with Navigation -->
+        <div class="lightbox-modal" id="lightboxModal">
+            <span class="lightbox-close" id="lightboxClose">&times;</span>
+            <button class="lightbox-btn lightbox-prev" id="lightboxPrev" aria-label="Previous Image">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <img
+                class="lightbox-content"
+                id="lightboxImg"
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E"
+                alt="Enlarged photo" />
+            <button class="lightbox-btn lightbox-next" id="lightboxNext" aria-label="Next Image">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

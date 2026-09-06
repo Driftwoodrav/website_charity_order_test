@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SharingSmilesCharity</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <nav class="navbar" aria-label="Main Navigation">
+            <div class="logo-container">
+                <img src="images/charity-logo.png" alt="SharingSmiles Charity Logo" class="brand-logo" />
+                <div class="logo-divider" role="separator"></div>
+                <img src="images/camed-logo.png" alt="CamEd Business School Logo" class="brand-logo" />
+            </div>
+
+            <button
+                class="menu-toggle"
+                id="mobileMenuBtn"
+                aria-label="Toggle Navigation Menu"
+                aria-expanded="false"
+                aria-controls="navLinks">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+
+            <div class="nav-right-container">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home" class="nav-item">Home</a></li>
+                    <li><a href="#about" class="nav-item">More About Us</a></li>
+                    <li><a href="#schools" class="nav-item">Schools We Help</a></li>
+                    <li><a href="#contact" class="nav-item">Contact Us</a></li>
+                </ul>
+
+                <a href="gallery.html" class="btn btn-gallery-nav">
+                    <i class="fa-solid fa-images" aria-hidden="true"></i> Photo Gallery
+                </a>
+
+                <!-- Updated to match btn-gallery-nav class -->
+                <a href="donate.html" class="btn btn-gallery-nav">
+                    <i class="fa-solid fa-heart" aria-hidden="true"></i> Donate Now
+                </a>
+            </div>
+        </nav>
+
+        <!-- Hero Header -->
+        <header id="home" class="hero">
+            <div class="hero-content">
+                <span class="badge">Brought to you by CamEd Business School</span>
+                <h1>Bringing Smiles to Children Across Cambodia</h1>
+                <p>
+                    Empowering local education and creating brighter futures through community support and charitable
+                    action.
+                </p>
+
+                <!-- Updated Hero Action Buttons -->
+                <div class="hero-btns">
+                    <a href="#schools" class="btn btn-primary">
+                        <i class="fa-solid fa-school" aria-hidden="true"></i> See Our Schools
+                    </a>
+                    <a href="donate.html" class="btn btn-primary">
+                        <i class="fa-solid fa-heart" aria-hidden="true"></i> Donate Now
+                    </a>
+                    <a href="gallery.html" class="btn btn-secondary">
+                        <i class="fa-solid fa-images" aria-hidden="true"></i> Photo Gallery
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fa-solid fa-envelope" aria-hidden="true"></i> Get In Touch
+                    </a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <!-- About Section -->
+            <section id="about" class="section about-section">
+                <div class="container">
+                    <h2 class="section-title">More About Us</h2>
+                    <div class="about-grid">
+                        <article class="about-card">
+                            <i class="fa-solid fa-heart icon" aria-hidden="true"></i>
+                            <h3>Our Mission</h3>
+                            <p>
+                                Driven by the students of CamEd Business School, SharingSmilesCharity aims to support
+                                under-resourced schools and improve educational environments for young students in need.
+                            </p>
+                        </article>
+                        <article class="about-card">
+                            <i class="fa-solid fa-hand-holding-heart icon" aria-hidden="true"></i>
+                            <h3>Community Support</h3>
+                            <p>
+                                We connect passionate volunteers and donors with rural learning communities to provide
+                                essential academic tools, renovation support, and positive learning spaces.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Schools Section -->
+            <section id="schools" class="section schools-section">
+                <div class="container">
+                    <h2 class="section-title">Schools The Charity Will Help</h2>
+                    <p class="section-subtitle">
+                        Discover the educational institutions we are currently partnering with to deliver supplies,
+                        infrastructure improvements, and direct student aid.
+                    </p>
+
+                    <div class="schools-grid">
+                        <!-- School Card 1 -->
+                        <article class="school-card">
+                            <div class="school-map-wrapper">
+                                <iframe
+                                    title="Location Map for Prei Ta Hoo Primary School"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d499047.20123968844!2d104.06662208906249!3d12.261386400000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310e8df96e8569df%3A0xa2a467a6f35b947f!2z4Z6f4Z624Z6b4Z624Z6U4Z6L4Z6Y4Z6f4Z634Z6A4Z-S4Z6f4Z624Z6W4Z-S4Z6a4Z-C4Z6A4Z6P4Z-S4Z6a4Z6U4Z-L!5e0!3m2!1sen!2skh!4v1788158507342!5m2!1sen!2skh"
+                                    width="100%"
+                                    height="200"
+                                    style="border: 0"
+                                    allowfullscreen=""
+                                    loading="lazy"
+                                    referrerpolicy="strict-origin-when-cross-origin">
+                                </iframe>
+                            </div>
+                            <div class="school-card-body">
+                                <h3>សាលាបឋមសិក្សាព្រៃតាហ៊ូ</h3>
+                                <p>
+                                    Providing updated textbook collections, stationery packs, and classroom repairs to
+                                    enhance everyday learning environments.
+                                </p>
+                            </div>
+                        </article>
+
+                        <!-- School Card 2 -->
+                        <article class="school-card">
+                            <div class="school-map-wrapper">
+                                <iframe
+                                    title="Location Map for Kang Meas Primary School"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d88251.22346004735!2d104.71483181153035!3d12.167470341973994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310e913993fff9c3%3A0xaa217ccc39756f12!2z4Z6f4Z624Z6b4Z624Z6U4Z6L4Z6Y4Z6f4Z634Z6A4Z-S4Z6f4Z62IOGegOGehOGemOGetuGenw!5e0!3m2!1sen!2skh!4v1788158678382!5m2!1sen!2skh"
+                                    width="100%"
+                                    height="200"
+                                    style="border: 0"
+                                    allowfullscreen=""
+                                    loading="lazy"
+                                    referrerpolicy="strict-origin-when-cross-origin">
+                                </iframe>
+                            </div>
+                            <div class="school-card-body">
+                                <h3>សាលាបឋមសិក្សាកងមាស</h3>
+                                <p>
+                                    Distributing desk furniture, basic technology supplies, and hygiene access kits for
+                                    young pupils.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="section contact-section">
+                <div class="container">
+                    <h2 class="section-title">Contact Us</h2>
+                    <p class="section-subtitle">
+                        Reach out to us directly or follow our official social channels to stay updated on our latest
+                        donation drives and activities.
+                    </p>
+
+                    <div class="contact-grid">
+                        <div class="contact-info">
+                            <h3>Get In Touch</h3>
+                            <div class="info-item">
+                                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                                <a href="tel:+85561484817" class="contact-link">(+855) 61 484817</a>
+                            </div>
+                            <div class="info-item">
+                                <i class="fa-solid fa-building-columns" aria-hidden="true"></i>
+                                <span>Brought to you by CamEd Business School</span>
+                            </div>
+
+                            <h3>Follow Us</h3>
+                            <div class="social-links">
+                                <a
+                                    href="https://web.facebook.com/profile.php?id=61592825173965"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="social-btn">
+                                    <i class="fa-brands fa-facebook-f" aria-hidden="true"></i> ចែករំលែកស្នាមញញឹម-Sharing
+                                    Smiles
+                                </a>
+                                <a
+                                    href="https://www.instagram.com/sharingsmilesforchildren"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="social-btn">
+                                    <i class="fa-brands fa-instagram" aria-hidden="true"></i> @sharingsmilesforchildren
+                                </a>
+                                <a
+                                    href="https://www.tiktok.com/@sharingsmilesforchildren"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="social-btn">
+                                    <i class="fa-brands fa-tiktok" aria-hidden="true"></i> @sharingsmilesforchildren
+                                </a>
+                            </div>
+                        </div>
+
+                        <form class="contact-form" id="charityContactForm">
+                            <h3>Send Us a Message</h3>
+                            <div class="form-group">
+                                <label for="name" class="sr-only">Your Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your Name" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="sr-only">Your Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="Your Email Address" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="message" class="sr-only"
+                                    >How would you like to support or get involved?</label
+                                >
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows="5"
+                                    placeholder="How would you like to support or get involved?"
+                                    required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 SharingSmilesCharity. Brought to you by CamEd Business School. All rights reserved.</p>
+        </footer>
+
+        <!-- Firebase Compatibility SDKs -->
+        <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+
+        <!-- Your Configuration File -->
+        <script src="firebase-config.js"></script>
+    </body>
+</html>
